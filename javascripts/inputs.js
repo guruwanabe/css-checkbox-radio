@@ -19,13 +19,14 @@
             var inputs = $('.custom-checkbox input, .custom-radio input');
             inputs.on('change', function(){
                 var input = $(this),
-                    wrapper = input.parent();
+                    wrapper = input.parent(),
+                    checkedValue = $(this).attr('value');
                 if(input.is(':checked')){
-                    input.prop('checked', true);
+                    input.prop('checked', true).val(checkedValue);
                     wrapper.addClass('checked');
                 }else{
                     input.prop('checked', false);
-                    wrapper.removeClass('checked');
+                    wrapper.removeClass('checked').val(checkedValue);
                 } 
             });
             
@@ -43,5 +44,5 @@
 	};
 
 	$(window).on('ready', app.ready);
-    
+
 } )( jQuery );
