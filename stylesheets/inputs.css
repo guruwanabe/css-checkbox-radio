@@ -1,0 +1,183 @@
+/*==== CSS CHECKBOXES ====*/
+.checkbox {
+	margin-top: 0;
+}
+.custom-checkbox{
+	position: relative;
+	display: inline-block;
+}
+.custom-checkbox > .box {
+	position: relative;
+	display: inline-block;
+	top: 3px;
+	width: 18px;
+	height: 18px;
+	border: 1px solid #d0d0d0;
+	background-color: #FFFFFF;
+	border-radius: 2px;
+	margin-right: 5px;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+	   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+	    -ms-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+	     -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+	        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+}
+.custom-checkbox > .box:hover,
+.custom-checkbox > .box:focus,
+label:hover .custom-checkbox > .box,
+label:focus .custom-checkbox > .box,
+.custom-checkbox > input:focus + .box {
+	border-color: #999;
+}
+.custom-checkbox > .box > .tick {
+	display: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	width: 10px;
+	height: 6px;
+	margin: 0 auto;
+	margin-top: -4px;
+	border-bottom: 3px solid #0075ee;
+	border-left: 3px solid #0075ee;
+	-webkit-transform: rotate(-45deg);
+	   -moz-transform: rotate(-45deg);
+	    -ms-transform: rotate(-45deg);
+	     -o-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
+}
+.custom-checkbox > input:checked + .box > .tick {
+	display: block;
+}
+.custom-checkbox > input {
+	position: absolute;
+	outline: none;
+	left: 0;
+	top: 0;
+	padding: 0;
+	width: 16px;
+	height: 16px;
+	border: none;
+	margin: 0;
+	opacity: 0;
+	z-index: 1;
+}
+.custom-checkbox > input:active + .box {
+	border-color: #aaa;
+	background-color: #ddd;
+}
+
+/*==== CSS RADIO ====*/
+.radio {
+	margin-top: 0;
+}
+.custom-radio {
+	position: relative;
+	display: inline-block;
+}
+.custom-radio > .box {
+	position: relative;
+	display: inline-block;
+	top: 3px;
+	width: 18px;
+	height: 18px;
+	border: 1px solid #d0d0d0;
+	background-color: #FFFFFF;
+	border-radius: 100%;
+	margin-right: 5px;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+	   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+	    -ms-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+	     -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+	        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+}
+.custom-radio > .box:hover,
+.custom-radio > .box:focus,
+label:hover .custom-radio > .box,
+label:focus .custom-radio > .box{
+	border-color: #999;
+}
+.custom-radio > .box > .tick {
+	background-color: #0075ee;
+	border-radius: 100%;
+	display: none;
+	height: 10px;
+	left: 0;
+	margin: -5px auto 0;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 10px;
+}
+.custom-radio > input:checked + .box > .tick {
+	display: block;
+}
+.custom-radio > input {
+	position: absolute;
+	outline: none;
+	left: 0;
+	top: 0;
+	padding: 0;
+	width: 16px;
+	height: 16px;
+	border: none;
+	margin: 0;
+	opacity: 0;
+	z-index: 1;
+}
+.custom-radio > input:active + .box {
+	border-color: #aaa;
+	background-color: #ddd;
+}
+
+/*==== DISABLED ====*/
+.radio label.disabled,
+.checkbox label.disabled {
+	cursor: not-allowed;
+	color: #c9c9c9;
+}
+.custom-checkbox > input[disabled="disabled"] + .box,
+.custom-radio > input[disabled="disabled"] + .box {
+	background-color: #e9e9e9;
+	cursor: not-allowed;
+	pointer-events: none;
+} 
+/*==== CHECKBOXES / RADIO  ====*/
+/*IE 7*/
+.ie7 .close > span > i,
+.ie7 .custom-checkbox > .box > .tick {
+	filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.7071067811865483, M12=0.7071067811865467, M21=0.7071067811865467, M22=0.7071067811865483);
+}
+.ie7 .custom-radio > input,
+.ie7 .custom-checkbox > input{
+	filter: alpha(opacity=0);
+}
+/*IE 8*/
+.ie8 .custom-radio.checked > .box > .tick,
+.ie8 .custom-checkbox.checked > .box > .tick,
+.ie8 .custom-radio input[checked="checked"] + .box > .tick,
+.ie8 .custom-checkbox > input[checked="checked"] + .box > .tick {
+	display: block;
+}
+.ie8 .custom-radio > input,
+.ie8 .custom-checkbox > input {
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+.ie8 .close > span > i,
+.ie8 .custom-checkbox > .box > .tick {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865483, M12=0.7071067811865467, M21=-0.7071067811865467, M22=0.7071067811865483, SizingMethod='auto expand')";
+}
+.ie8 .radio-checkbox,
+.ie8 .custom-checkbox{
+	zoom: 1;
+}
+.ie8 .custom-radio > .box > .tick,
+.ie8 .custom-checkbox > .box > .tick{
+	top: 6px;
+	zoom: 1;
+}
+.ie8 .custom-radio > .box > .tick{
+	top: 8px;
+}
