@@ -10,25 +10,38 @@
 
 ( function( $ ) {
 
-	window.app = {
+     var app = {
 
-		ready: function() {
-			app.customInputs();
-		},
+        ready: function() {
+            app.customInputs();
+        },
         customInputs: function() {
             var inputs = $('.custom-checkbox input, .custom-radio input');
             inputs.on('change', function(){
-                var ref = $(this),
-                    wrapper = ref.parent();
-                if(ref.is(':checked')) wrapper.addClass('checked');
-                else wrapper.removeClass('checked');
+                var input = $(this),
+                    wrapper = input.parent();
+                if(input.is(':checked')){
+                    input.prop('checked', true);
+                    wrapper.addClass('checked');
+                }else{
+                    input.prop('checked', false);
+                    wrapper.removeClass('checked');
+                } 
             });
+            
+            inputs.each(function(){
+                var input = $(this),
+                    wrapper = input.parent().parent();
+                if(input.is(':disabled')){
+                    wrapper.addClass('disabled')
+                }
+            });
+
             inputs.trigger('change');
-
+            
         }
+    };
 
-	};
-	$(window).on('ready', app.ready);
-	$(window).on('load', app.load);
-	$(window).on('resize', app.resize);
+    $(window).on('ready', app.ready);
+    
 } )( jQuery );
