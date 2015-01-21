@@ -22,11 +22,13 @@
                     wrapper = input.parent(),
                     checkedValue = $(this).attr('value');
                 if(input.is(':checked')){
-                    input.prop('checked', true).val(checkedValue);
+                    input.val(checkedValue).prop('checked', true);
+                    input.attr('checked', 'checked');
                     wrapper.addClass('checked');
                 }else{
-                    input.prop('checked', false);
-                    wrapper.removeClass('checked').val(checkedValue);
+                    input.val(checkedValue).prop('checked', false);
+                    input.removeAttr('checked');
+                    wrapper.removeClass('checked');
                 } 
             });
             
