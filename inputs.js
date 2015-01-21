@@ -10,21 +10,24 @@
 
 ( function( $ ) {
 
-     var app = {
+	 var app = {
 
-        ready: function() {
-            app.customInputs();
-        },
+		ready: function() {
+			app.customInputs();
+		},
         customInputs: function() {
             var inputs = $('.custom-checkbox input, .custom-radio input');
             inputs.on('change', function(){
                 var input = $(this),
-                    wrapper = input.parent();
+                    wrapper = input.parent(),
+                    checkedValue = $(this).attr('value');
                 if(input.is(':checked')){
-                    input.prop('checked', true);
+                    input.val(checkedValue).prop('checked', true);
+                    input.attr('checked', 'checked');
                     wrapper.addClass('checked');
                 }else{
-                    input.prop('checked', false);
+                    input.val(checkedValue).prop('checked', false);
+                    input.removeAttr('checked');
                     wrapper.removeClass('checked');
                 } 
             });
@@ -40,8 +43,8 @@
             inputs.trigger('change');
             
         }
-    };
+	};
 
-    $(window).on('ready', app.ready);
-    
+	$(window).on('ready', app.ready);
+
 } )( jQuery );
