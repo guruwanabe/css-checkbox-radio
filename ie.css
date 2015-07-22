@@ -1,4 +1,15 @@
 /*==== CHECKBOXES / RADIO  ====*/
+
+.ie .custom-checkbox > .box > .tick,
+.ie .custom-radio > .box > .tick  {
+	display: none;
+}
+.ie .custom-checkbox > input:checked + .box > .tick,
+.ie .custom-checkbox.checked > input + .box > .tick,
+.ie .custom-radio > input:checked + .box > .tick,
+.ie .custom-radio.checked > input + .box > .tick  {
+	display: block;
+}
 /*IE 7*/
 .ie7 .custom-checkbox > .box > .tick {
 	filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.7071067811865483, M12=0.7071067811865467, M21=0.7071067811865467, M22=0.7071067811865483);

@@ -11,6 +11,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" type="text/css" rel="stylesheet">
 	<link href="inputs.css" type="text/css" rel="stylesheet">
+  <link href="theme.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 	<div class="container">
@@ -73,15 +74,6 @@
                     <span class="custom-radio">
                       <input type="radio" value="1" name="radio">
                       <span class="box"><span class="tick"></span></span>
-                      Unchecked
-                    </span>
-                  </label>
-                </div>
-                <div class="radio">
-                  <label>
-                    <span class="custom-radio">
-                      <input type="radio" value="2" name="radio" checked="checked">
-                      <span class="box"><span class="tick"></span></span>
                       Checked
                     </span>
                   </label>
@@ -89,9 +81,27 @@
                 <div class="radio">
                   <label>
                     <span class="custom-radio">
+                      <input type="radio" value="2" name="radio">
+                      <span class="box"><span class="tick"></span></span>
+                      Unchecked
+                    </span>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="disabled">
+                    <span class="custom-radio">
                       <input type="radio" value="3" name="radio" disabled="disabled">
                       <span class="box"><span class="tick"></span></span>
                        Disabled unchecked
+                    </span>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="disabled">
+                    <span class="custom-radio checked">
+                      <input type="radio" value="3" name="radio" disabled="disabled" checked="checked">
+                      <span class="box"><span class="tick"></span></span>
+                       Disabled checked
                     </span>
                   </label>
                 </div>
@@ -100,6 +110,101 @@
             <div class="panel-footer">
               <span class="text-muted">Note: Javascript file is necessary only for old browsers</span>
             </div>
+          </div>
+          <div class="blue-theme">
+             <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Example theme</h3>
+                </div>
+                <div class="panel-body">
+                  <form role="form">
+                    <div class="checkbox">
+                      <label>
+                        <span class="custom-checkbox">
+                          <input type="checkbox" value="1" name="checkbox">
+                          <span class="box"><span class="tick"></span></span>
+                          Unchecked
+                        </span>
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <span class="custom-checkbox">
+                          <input type="checkbox" value="2" name="checkbox" checked="checked">
+                          <span class="box"><span class="tick"></span></span>
+                           Checked
+                        </span>
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <span class="custom-checkbox">
+                          <input type="checkbox" value="3" name="checkbox" disabled="disabled" checked="checked">
+                          <span class="box"><span class="tick"></span></span>
+                          Disabled checked
+                        </span>
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <span class="custom-checkbox">
+                          <input type="checkbox" value="3" name="checkbox" disabled="disabled">
+                          <span class="box"><span class="tick"></span></span>
+                          Disabled unchecked
+                        </span>
+                      </label>
+                    </div>
+                  </form>  
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                   <h3 class="panel-title">Example theme</h3>
+                </div>
+                <div class="panel-body">
+                  <form role="form">
+                    <div class="radio">
+                      <label>
+                        <span class="custom-radio">
+                          <input type="radio" value="1" name="radio">
+                          <span class="box"><span class="tick"></span></span>
+                          Checked
+                        </span>
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <span class="custom-radio">
+                          <input type="radio" value="2" name="radio">
+                          <span class="box"><span class="tick"></span></span>
+                          Unchecked
+                        </span>
+                      </label>
+                    </div>
+                    <div class="radio">
+                     <label class="disabled">
+                        <span class="custom-radio">
+                          <input type="radio" value="3" name="radio" disabled="disabled">
+                          <span class="box"><span class="tick"></span></span>
+                           Disabled unchecked
+                        </span>
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label class="disabled">
+                        <span class="custom-radio checked">
+                          <input type="radio" value="3" name="radio" disabled="disabled" checked="checked">
+                          <span class="box"><span class="tick"></span></span>
+                           Disabled checked
+                        </span>
+                      </label>
+                    </div>
+                  </form> 
+                </div>
+                <div class="panel-footer">
+                  <span class="text-muted">Note: Javascript file is necessary only for old browsers</span>
+                </div>
+              </div>     
           </div>    
         </div>
       </div>
