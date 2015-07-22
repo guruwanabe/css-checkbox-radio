@@ -1,0 +1,16 @@
+/*CHECKBOX*/
+.blue-theme .custom-checkbox > .box > .tick {
+	border-color: #0075ee;
+}
+.blue-theme .custom-checkbox > input:checked + .box,
+.blue-theme .custom-checkbox.checked > input + .box {
+  	border-color: #0075ee;
+}
+/*RADIO*/
+.blue-theme .custom-radio > .box > .tick {
+	background-color: #0075ee;
+}
+.blue-theme .custom-radio > input:checked + .box,
+.blue-theme .custom-radio.checked > input + .box {
+  	border-color: #0075ee;
+}
