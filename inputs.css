@@ -179,7 +179,6 @@ label:focus .custom-radio > .box{
 .custom-checkbox > input[disabled="disabled"] + .box > .tick{
 	border-color: #BBBBBB !important;
 }
-
 .custom-radio > input[disabled="disabled"] + .box > .tick {
 	background-color: #BBBBBB !important;
 }
