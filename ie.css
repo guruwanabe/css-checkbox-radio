@@ -1,0 +1,47 @@
+/*==== CHECKBOXES / RADIO  ====*/
+
+.ie .custom-checkbox > .box > .tick,
+.ie .custom-radio > .box > .tick  {
+	display: none;
+}
+.ie .custom-checkbox > input:checked + .box > .tick,
+.ie .custom-checkbox.checked > input + .box > .tick,
+.ie .custom-radio > input:checked + .box > .tick,
+.ie .custom-radio.checked > input + .box > .tick  {
+	display: block;
+}
+/*IE 7*/
+.ie7 .custom-checkbox > .box > .tick {
+	filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.7071067811865483, M12=0.7071067811865467, M21=0.7071067811865467, M22=0.7071067811865483);
+}
+.ie7 .custom-radio > input,
+.ie7 .custom-checkbox > input{
+	filter: alpha(opacity=0);
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+}
+/*IE 8*/
+.ie8 .custom-radio.checked > .box > .tick,
+.ie8 .custom-checkbox.checked > .box > .tick,
+.ie8 .custom-radio input[checked="checked"] + .box > .tick,
+.ie8 .custom-checkbox > input[checked="checked"] + .box > .tick {
+	display: block;
+}
+.ie8 .custom-radio > input,
+.ie8 .custom-checkbox > input {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+.ie8 .custom-checkbox > .box > .tick {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865483, M12=0.7071067811865467, M21=-0.7071067811865467, M22=0.7071067811865483, SizingMethod='auto expand')";
+}
+.ie8 .radio-checkbox,
+.ie8 .custom-checkbox{
+	zoom: 1;
+}
+.ie8 .custom-radio > .box > .tick,
+.ie8 .custom-checkbox > .box > .tick{
+	top: 6px;
+	zoom: 1;
+}
+.ie8 .custom-radio > .box > .tick{
+	top: 8px;
+}
