@@ -15,7 +15,7 @@
 			app.customInputs();
 		},
     customInputs: function() {
-      var inputs = $('.custom-checkbox input');
+      var inputs = $('.custom-checkbox input, .custom-radio input');
       inputs.on('change', function(){
           var input = $(this),
               wrapper = input.parent(),
