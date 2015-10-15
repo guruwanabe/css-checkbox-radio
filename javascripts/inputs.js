@@ -10,12 +10,12 @@
 
 ( function( $ ) {
 
-	 var app = {
-		ready: function() {
-			app.customInputs();
-		},
+   var app = {
+    ready: function() {
+      app.customInputs();
+    },
     customInputs: function() {
-      var inputs = $('.custom-checkbox input');
+      var inputs = $('.custom-checkbox input, .custom-radio input');
       inputs.on('change', function(){
           var input = $(this),
               wrapper = input.parent(),
@@ -42,8 +42,8 @@
 
       inputs.trigger('change');
     }
-	};
+  };
 
-	$(window).on('ready', app.ready);
+  $(window).on('ready', app.ready);
 
 } )( jQuery );
