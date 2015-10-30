@@ -26,7 +26,7 @@
 			background-color: $input-bg;
 			margin-right: 0;
 			@include border-radius($radio-border-radius);
-			@if $radio-box-shadow == 'true'{
+			@if $radio-box-shadow {
 				@include box-shadow($radio-box-shadow);
 			}
 			&:hover,
