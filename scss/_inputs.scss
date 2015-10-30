@@ -1,0 +1,13 @@
+// Usage:
+// Include this in your global scss file.
+// Make sure you include _custom-inputs.scss in your mixins
+// Customize to your likeings!
+// ==========================================================================
+
+.checkbox {
+	@include checkbox-input();
+}
+
+.radio{
+	@include radio-input();
+}
