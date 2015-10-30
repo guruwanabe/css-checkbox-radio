@@ -1,0 +1,163 @@
+@mixin radio-input($radio-size: 18px, $radio-border-radius: 100%, $radio-tick-size: 10px, $radio-tick-bg-color: #0075ee, $radio-v-align: 1px, $radio-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset){
+
+	// These are global vars, they should be moved into your _variables.scss file
+	// ==========================================================================
+
+    $input-bg:                       #fff !default;
+	$input-color-placeholder:        #999 !default;
+	$radio-border:                	 #d0d0d0 !default;
+    $radio-active-border: 			 #aaa !default;
+    $radio-active-bg: 				 #ddd !default;
+
+    // Radio style constructor
+	// ==========================================================================
+
+	.custom-radio{
+		position: relative;
+		display: inline-block;
+		vertical-align: text-bottom;
+		> .box {
+			position: relative;
+			display: inline-block;
+			top: $radio-v-align;
+			width: $radio-size;
+			height: $radio-size;
+			border: 1px solid $radio-radio-border;
+			background-color: $input-bg;
+			margin-right: 0;
+			@include border-radius($radio-border-radius);
+			@if $radio-box-shadow == 'true'{
+				@include box-shadow($radio-box-shadow);
+			}
+			&:hover,
+			&:focus{
+				border-color: $input-color-placeholder;
+			}
+			> .tick {
+				display: none;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 50%;
+				width: $radio-tick-size;
+				height: $radio-tick-size;
+				margin: 0 auto;
+				margin-top: -($radio-tick-size / 2);
+				background-color: $radio-tick-bg-color;
+				@include border-radius(100px);
+			}
+		}
+		> input {
+			position: absolute;
+			outline: none;
+			left: 0;
+			top: 0;
+			padding: 0;
+			width: $radio-size;
+			height: $radio-size;
+			border: none;
+			margin: 0;
+			@include opacity(0);
+			&.checked + .box > .tick,
+			&:checked + .box > .tick{
+				display: block;
+			}
+			&:active + .box {
+				border-color: $radio-active-border;
+				background-color: $radio-active-bg;
+			}
+			&:focus + .box {
+				border-color: $input-color-placeholder;
+			}
+		}
+	}
+	&:hover .box,
+	&:focus .box{
+		border-color: $input-color-placeholder;
+	}
+	&.disabled{
+		cursor: not-allowed;
+	}
+}
+
+@mixin checkbox-input($checkbox-size: 18px, $checkbox-border-radius: 2px, $checkbox-tick-size: 10px, $checkbox-tick-border: 3px, $checkbox-tick-color: $brand-primary, $checkbox-v-align: 1px, $checkbox-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset) {
+
+    // These are global vars, they should be moved into your _variables.scss file
+	// ==========================================================================
+
+    $input-bg:                       #fff !default;
+	$input-color-placeholder:        #999 !default;
+	$checkbox-border:                #d0d0d0 !default;
+	$checkbox-active-border: 		 #aaa !default;
+	$checkbox-active-bg: 			 #ddd !default;
+
+    // Checkbox style constructor
+	// ==========================================================================
+
+	.custom-checkbox {
+		position: relative;
+		display: inline-block;
+		> .box {
+			position: relative;
+			display: inline-block;
+			top: $checkbox-v-align;
+			width: $checkbox-size;
+			height: $checkbox-size;
+			border: 1px solid $checkbox-border;
+			background-color: $input-bg;
+			margin-right: 0;
+			@include border-radius($checkbox-border-radius);
+			@if $checkbox-box-shadow {
+				@include box-shadow($checkbox-box-shadow);
+			}
+			&:hover,
+			&:focus {
+				border-color: $input-color-placeholder;
+			}
+			> .tick {
+				display: none;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 50%;
+				width: $checkbox-tick-size;
+				height: floor($checkbox-tick-border * 2);
+				margin: 0 auto;
+				margin-top: - floor($checkbox-tick-size - ($checkbox-tick-border * 2));
+				border-bottom: $checkbox-tick-border solid $checkbox-tick-color;
+				border-left: $checkbox-tick-border solid $checkbox-tick-color;
+				@include rotate(-45deg);
+			}
+		}
+		> input {
+			position: absolute;
+			outline: none;
+			left: 0;
+			top: 0;
+			padding: 0;
+			width: 16px;
+			height: 16px;
+			border: none;
+			margin: 0;
+			@include opacity(0);
+			&.checked + .box > .tick,
+			&:checked + .box > .tick{
+				display: block;
+			}
+			&:active + .box {
+				border-color: $checkbox-active-border;
+				background-color: $checkbox-active-bg;
+			}
+			&:focus + .box {
+				border-color: $input-color-placeholder;
+			}
+		}
+	}
+	&:hover .box,
+	&:focus .box {
+		border-color: $input-color-placeholder;
+	}
+	&.disabled {
+		cursor: not-allowed;
+	}
+}
