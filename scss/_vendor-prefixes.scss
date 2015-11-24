@@ -233,3 +233,10 @@
       -ms-user-select: $select; // IE10+
           user-select: $select;
 }
+
+// Border radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
