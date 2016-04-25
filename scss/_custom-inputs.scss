@@ -1,15 +1,15 @@
 @mixin radio-input($radio-size: 18px, $radio-border-radius: 100%, $radio-tick-size: 10px, $radio-tick-bg-color: #0075ee, $radio-v-align: 1px, $radio-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset){
 
-	// These are global vars, they should be moved into your _variables.scss file
+	// Vars
 	// ==========================================================================
 
-    $input-bg:                       #fff !default;
-		$input-color-placeholder:        #999 !default;
-		$radio-border:                	 #d0d0d0 !default;
-    $radio-active-border: 			 		 #aaa !default;
-    $radio-active-bg: 				 			 #ddd !default;
+	$input-bg:                       #fff !default;
+	$input-color-placeholder:        #999 !default;
+	$radio-border:                	 #d0d0d0 !default;
+    	$radio-active-border: 			 		 #aaa !default;
+    	$radio-active-bg: 				 			 #ddd !default;
 
-    // Radio style constructor
+    	// Radio style constructor
 	// ==========================================================================
 
 	.custom-radio{
@@ -86,17 +86,17 @@
 
 @mixin checkbox-input($checkbox-size: 18px, $checkbox-border-radius: 2px, $checkbox-tick-size: 10px, $checkbox-tick-border: 3px, $checkbox-tick-color: #0075ee, $checkbox-v-align: 1px, $checkbox-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset) {
 
-  // These are global vars, they should be moved into your _variables.scss file
-  // ==========================================================================
+	// Vars
+	// ==========================================================================
 
-  $input-bg:                       #fff !default;
+	$input-bg:                       #fff !default;
 	$input-color-placeholder:        #999 !default;
 	$checkbox-border:                #d0d0d0 !default;
 	$checkbox-active-border: 		     #aaa !default;
 	$checkbox-active-bg: 			       #ddd !default;
 
-  // Checkbox style constructor
-  // ==========================================================================
+	// Checkbox style constructor
+	// ==========================================================================
 
 	.custom-checkbox {
 		position: relative;
